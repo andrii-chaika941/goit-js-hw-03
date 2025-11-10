@@ -1,14 +1,14 @@
 function makeArray(firstArray, secondArray, maxLength) {
-  const arrayLenght = firstArray.length + secondArray.length;
-  if (maxLength >= arrayLenght) {
+  const arrayLength = firstArray.length + secondArray.length;
+  if (maxLength >= arrayLength) {
     const arrayRes = firstArray.concat(secondArray);
     return arrayRes;
-  } else if (maxLength !== 0 && maxLength < arrayLenght) {
+  } else if (maxLength !== 0 && maxLength < arrayLength) {
     const maxLengthArray = maxLength - firstArray.length;
     const secondArrayRes = secondArray.slice(0, maxLengthArray);
     const res = firstArray.concat(secondArrayRes);
     return res;
-  } else if (maxLength === 0) {
+  } else {
     const emptyArray = [];
     return emptyArray;
   }
